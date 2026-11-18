@@ -1,0 +1,13 @@
+{
+  "name": "faketrader-lark-cli",
+  "description": "Lark and Feishu skills for Claude Code, powered by lark-cli.",
+  "owner": {
+    "name": "faketrader"
+  },
+  "plugins": [
+    {
+      "name": "lark-cli",
+      "source": "./"
+    }
+  ]
+}

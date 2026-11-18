@@ -1,0 +1,11 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "lark-cli",
+  "description": "Work with Lark and Feishu messages, documents, calendars, and other workspace data through lark-cli.",
+  "author": {
+    "name": "faketrader",
+    "url": "https://github.com/faketrader"
+  },
+  "repository": "https://github.com/faketrader/lark-cli",
+  "license": "MIT"
+}
