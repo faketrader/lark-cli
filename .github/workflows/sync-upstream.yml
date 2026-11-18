@@ -23,12 +23,15 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Merge upstream main
+      - name: Sync the latest upstream release
         shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
+          release_tag=$(gh api repos/larksuite/cli/releases/latest --jq '.tag_name')
           git -c http.https://github.com/.extraheader= fetch --no-tags \
-            https://github.com/larksuite/cli.git refs/heads/main
+            https://github.com/larksuite/cli.git "refs/tags/$release_tag"
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          bash scripts/sync-upstream.sh FETCH_HEAD
+          bash scripts/sync-upstream.sh FETCH_HEAD "$release_tag"
           git push origin HEAD:refs/heads/main

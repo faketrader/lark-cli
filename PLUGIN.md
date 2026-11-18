@@ -31,10 +31,14 @@ codex plugin add lark-cli@faketrader-lark-cli
 
 桌面端也可在插件目录中选择 `faketrader-lark-cli` 来源并安装 **Lark CLI**。运行 `codex plugin marketplace upgrade faketrader-lark-cli` 拉取更新。
 
+## Magpie
+
+在 **资源库 → Claude 插件** 中搜索并安装 `faketrader/lark-cli`。已安装时，点开插件卡片并选择 **更新**。
+
 ## 上游同步
 
-[Sync upstream](./.github/workflows/sync-upstream.yml) 每周五 12:34 UTC 将 `larksuite/cli` 的 `main` 合并到此 fork 的 `main`。源码和技能随合并更新，`.github/workflows/` 由 fork 自行管理。发生其他路径的合并冲突时，工作流会列出冲突文件并停止。解决冲突后可在 GitHub Actions 中手动运行。
+[Sync upstream](./.github/workflows/sync-upstream.yml) 每周五 12:34 UTC 合并上游的[最新正式 Release](https://github.com/larksuite/cli/releases/latest)。插件技能取自同一个发布标签，插件版本使用标签中的版本号，例如 `v1.0.100` 对应 `1.0.100`。`.github/workflows/` 由 fork 自行管理。其他路径发生合并冲突时，工作流会列出文件并停止。
 
 ## English
 
-Install the `lark-cli` plugin through the marketplace for Claude Code or Codex. The plugin uses the upstream skills and requires an installed, authorised Lark CLI. The fork merges upstream changes every Friday at 12:34 UTC and keeps its own GitHub Actions workflows.
+Install the `lark-cli` plugin through Claude Code, Codex or Magpie. The plugin requires an installed, authorised Lark CLI. Every Friday at 12:34 UTC, the fork syncs its plugin version and skills with the latest official release.

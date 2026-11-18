@@ -1,5 +1,6 @@
 {
   "name": "lark-cli",
+  "version": "1.0.100",
   "description": "Work with Lark and Feishu messages, documents, calendars, and other workspace data through lark-cli.",
   "author": {
     "name": "faketrader",
